@@ -1,0 +1,443 @@
+body {
+    overflow: hidden;
+    /* Désactive le défilement */
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+    /* Masque la barre de défilement */
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+main {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+aside {
+    background-color: rgb(0, 0, 0);
+    width: 250px;
+    height: 100vh;
+    box-shadow: 1px 2px 5px #0d1d2c;
+    overflow-y: hidden;
+    /* Désactive le défilement dans la barre latérale */
+}
+
+aside .profile-details {
+    margin-top: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid rgb(6, 61, 54);
+}
+
+aside .profile-details img {
+    border-radius: 50%;
+    border: 5px solid black;
+}
+
+aside .profile-details h3 {
+    color: aqua;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.9em;
+    font-weight: normal;
+    text-align: center;
+}
+
+aside nav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 2px;
+}
+
+aside nav a {
+    position: relative;
+    text-decoration: none;
+    color: antiquewhite;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 11pt;
+    padding: 10px;
+}
+
+aside nav a:hover {
+    transition: 0.1s ease;
+    background-color: #353636;
+    border-left: 3px solid aqua;
+    cursor: pointer;
+}
+
+main section {
+    background-color: #060d14;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: whitesmoke;
+    display: grid;
+    grid-template-rows: 1fr;
+    overflow-y: hidden;
+    /* Désactive le défilement vertical */
+}
+
+pre {
+    font-size: 1.55em;
+}
+
+
+/* Style pour le bloc about */
+
+main section .about {
+    text-shadow: 1px 0px 0px rgb(54, 142, 184);
+    height: 100vh;
+    padding: 20px;
+}
+
+main section .about h2 {
+    font-weight: 100;
+    font-size: 3.1em;
+}
+
+main section .about h3 {
+    font-weight: 1;
+    font-size: x-large;
+}
+
+main section .about h2 span {
+    color: rgba(0, 255, 255, 0.61);
+}
+
+.social-links {
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+}
+
+main section .education,
+.skills,
+.projects,
+.experience,
+.contact {
+    height: 100vh;
+    overflow-x: hidden;
+    /* Désactive le défilement horizontal */
+}
+
+main section .label {
+    width: 100%;
+    padding: 20px 0px 20px 0px;
+    background-color: rgba(3, 77, 100, 0.555);
+    line-height: 50px;
+    font-size: 2em;
+    color: #ffffff;
+    text-shadow: none;
+}
+
+section {
+    scroll-behavior: smooth;
+}
+
+
+/* Style pour le bloc Éducation */
+
+.education {
+    display: flex;
+    justify-content: center;
+    /* Centre les cartes horizontalement */
+    align-items: flex-start;
+    /* Aligne les cartes en haut */
+    gap: 20px;
+    /* Espace entre les cartes */
+    padding: 20px;
+    min-height: 100vh;
+    /* Prend toute la hauteur de la page */
+    box-sizing: border-box;
+    /* Inclut le padding dans la hauteur */
+    overflow-x: auto;
+    /* Permet le défilement horizontal si nécessaire */
+    margin-top: 50px;
+    /* Monte les cartes vers le haut */
+}
+
+.education-card {
+    background: whitesmoke;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Taille des cartes */
+
+.education-card.small {
+    width: 250px;
+    /* Carte petite */
+    height: 300px;
+    /* Hauteur fixe */
+}
+
+.education-card.medium {
+    width: 300px;
+    /* Carte moyenne */
+    height: 350px;
+    /* Hauteur fixe */
+}
+
+.education-card.large {
+    width: 350px;
+    /* Carte grande */
+    height: 400px;
+    /* Hauteur fixe */
+}
+
+.year {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: black;
+    background: linear-gradient(135deg, #007bff, #00bfff, aqua);
+    /* Dégradé moderne */
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-content h2 {
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.card-content h3 {
+    font-size: 1em;
+    color: rgba(7, 41, 49, 0.555);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.card-content p {
+    font-size: 0.9em;
+    color: #726c6c;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.card-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: #007bff;
+    font-size: 0.85em;
+}
+
+.card-content ul li {
+    margin-bottom: 5px;
+}
+
+
+/* Style pour le bloc skills */
+
+.languages-box,
+.Libraries {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    box-shadow: 0 0 5px black;
+    margin-top: 30px;
+}
+
+.languages-box p,
+.Libraries p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.493);
+    width: 100%;
+    padding-bottom: 15px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+
+/* Style pour le bloc Projets */
+
+.projects .inner-box .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 0 5px rgb(0, 0, 0);
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+    text-align: center;
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Prend toute la hauteur de la page */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.inner-box {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 250px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+    /* Zoom léger sur l'image au survol */
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    /* Fond semi-transparent */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    /* Démarre invisible */
+    transition: opacity 0.3s ease;
+    border-radius: 12px;
+}
+
+.card:hover .card-overlay {
+    opacity: 1;
+    /* Rend la superposition visible au survol */
+}
+
+.overlay-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.overlay-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.overlay-content p {
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.overlay-content a {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.overlay-content a:hover {
+    background: #0056b3;
+}
+
+
+/* Style pour le bloc experiences */
+
+.experience .experience-box {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    padding: 20px;
+    position: relative;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: 0 0 5px black;
+}
+
+.experience .experience-box h1 {
+    color: rgb(0, 255, 255);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.493);
+}
+
+.experience .experience-box h3 {
+    color: rgba(0, 255, 255, 0.479);
+}
+
+
+/* Style pour le bloc contact */
+
+.contact-box {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    gap: 50px;
+}
+
+.contact-box a {
+    text-decoration: none;
+    color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+@media screen and (max-width:700px) {
+    main aside {
+        width: 0;
+    }
+    main section .label {
+        text-align: center;
+    }
+    header {
+        display: block;
+    }
+}
