@@ -10,7 +10,13 @@
 
 </head>
 
+
+
+
+
+
 <body>
+
 
     <div class="container">
         <main>
@@ -26,15 +32,59 @@
                     <a href="#projects">PROJECTS</a>
                     <a href="#experience">EXPERIENCES</a>
                     <a href="#contact">CONTACT</a>
+                    <button onclick="window.location.href='signup.html'" style=" font-family: Verdana;font-size: 11pt;margin-top: 10px; padding: 10px 20px;  background: linear-gradient(135deg, #007bff, #00bfff, aqua); border: none; cursor: pointer;">
+                        S'inscrire
+                    </button>
+                </nav>
+
+
                 </nav>
             </aside>
+
             <section>
+                <div id="signupForm" style="display: none; padding: 20px; background-color: #f9f9f9; border: 1px solid #ddd; margin: 20px 0;">
+                    <h2>Formulaire d'Inscription</h2>
+                    <form id="registrationForm">
+                        <label for="firstName">Prénom :</label>
+                        <input type="text" id="firstName" required><br>
+
+                        <label for="lastName">Nom :</label>
+                        <input type="text" id="lastName" required><br>
+
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" required><br>
+
+                        <label for="password">Mot de passe :</label>
+                        <input type="password" id="password" required><br>
+
+                        <label for="phone">Téléphone :</label>
+                        <input type="tel" id="phone" required pattern="^\\+?[0-9]{10,15}$"><br>
+
+                        <label for="gender">Genre :</label>
+                        <select id="gender" required>
+                            <option value="">Sélectionner</option>
+                            <option value="male">Homme</option>
+                            <option value="female">Femme</option>
+                        </select><br>
+
+                        <label for="dob">Date de naissance :</label>
+                        <input type="date" id="dob" required><br>
+
+                        <label for="picture">Photo de profil :</label>
+                        <input type="file" id="picture" accept="image/*" required><br>
+
+                        <button type="submit" style="margin-top: 10px;">S'inscrire</button>
+                        <button type="button" id="closeSignupBtn" style="margin-left: 10px;">Annuler</button>
+                    </form>
+                </div>
+
                 <!-- about block -->
                 <div class="about" id="about">
                     <h2>Salut, Je suis <span>IHSANE FOUDAL</span></h2>
                     <h3>Une <span id="type" style="color: aqua;">C Programmer</span></h3>
+                    <hr>
                     <pre>
-                        
+                       
 Étudiante en 1ère année cycle ingénieure à l'École Nationale des Sciences Appliquées de Khouribga,
 
 spécialisée en Informatique et Ingénierie des Données (IID). Passionnée par les mathématiques,
@@ -51,7 +101,7 @@ l'informatique et la programmation, je m'intéresse généralement au traitement
                     <div class="education-card small">
                         <div class="year">2022 - 2023</div>
                         <div class="card-content">
-                            <h2>Lycée Imam Malek de Khouribga</h2>
+                            <h2>Lycée Al Imam Malik de Khouribga</h2>
                             <h3>Baccalauréat en Science Physique</h3>
                             <p>Formation générale en sciences avec une spécialisation en mathématiques et physique.</p>
                             <ul>
