@@ -56,6 +56,7 @@ aside .profile-details h3 {
     font-size: 0.9em;
     font-weight: normal;
     text-align: center;
+    text-shadow: 0px 0px 10px cyan, 0px 0px 20px cyan, 0px 0px 40px cyan, 0px 0px 80px cyan;
 }
 
 aside nav {
@@ -116,7 +117,8 @@ main section .about h3 {
 }
 
 main section .about h2 span {
-    color: rgba(0, 255, 255, 0.61);
+    color: cyan;
+    text-shadow: 0px 0px 10px cyan, 0px 0px 20px cyan, 0px 0px 40px cyan, 0px 0px 80px cyan;
 }
 
 .social-links {
@@ -194,6 +196,7 @@ section {
     /* Carte petite */
     height: 300px;
     /* Hauteur fixe */
+    box-shadow: 0px 0px 10px white;
 }
 
 .education-card.medium {
@@ -201,6 +204,7 @@ section {
     /* Carte moyenne */
     height: 350px;
     /* Hauteur fixe */
+    box-shadow: 0px 0px 10px white;
 }
 
 .education-card.large {
@@ -208,6 +212,7 @@ section {
     /* Carte grande */
     height: 400px;
     /* Hauteur fixe */
+    box-shadow: 0px 0px 10px white;
 }
 
 .year {
@@ -283,57 +288,62 @@ section {
 
 /* Style pour le bloc Projets */
 
-.projects .inner-box .card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    box-shadow: 0 0 5px rgb(0, 0, 0);
-    width: fit-content;
-    height: fit-content;
-    cursor: pointer;
-    text-align: center;
-}
-
 .projects {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    /* Prend toute la hauteur de la page */
     padding: 20px;
     box-sizing: border-box;
+    background-color: #060d14;
+    height: 100vh;
 }
+
+
+/* Grille : 2 images en haut, 2 en bas */
 
 .inner-box {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 colonnes */
+    grid-template-rows: auto auto;
+    /* 2 lignes */
+    gap: 15px;
+    width: 90%;
+    max-width: 800px;
+    padding: 10px;
 }
 
+
+/* Style des cartes */
+
 .card {
-    width: 250px;
-    height: 300px;
     position: relative;
     overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 200px;
+    width: 100%;
+    max-width: 380px;
 }
+
+
+/* Images ajustées */
 
 .card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: 10px;
     transition: transform 0.3s ease;
 }
 
 .card:hover img {
-    transform: scale(1.1);
-    /* Zoom léger sur l'image au survol */
+    transform: scale(1.05);
 }
+
+
+/* Superposition au survol */
 
 .card-overlay {
     position: absolute;
@@ -342,50 +352,50 @@ section {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
-    /* Fond semi-transparent */
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
-    /* Démarre invisible */
     transition: opacity 0.3s ease;
-    border-radius: 12px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
 }
 
 .card:hover .card-overlay {
     opacity: 1;
-    /* Rend la superposition visible au survol */
 }
 
-.overlay-content {
-    text-align: center;
-    padding: 20px;
-}
 
-.overlay-content h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-.overlay-content p {
-    font-size: 0.9em;
-    line-height: 1.5;
-    margin-bottom: 15px;
-}
+/* Bouton lien */
 
 .overlay-content a {
     display: inline-block;
     background: #007bff;
     color: #fff;
-    padding: 10px 20px;
-    border-radius: 8px;
+    padding: 8px 15px;
+    border-radius: 6px;
     text-decoration: none;
     transition: background 0.3s ease;
+    font-weight: bold;
 }
 
 .overlay-content a:hover {
-    background: #0056b3;
+    background: rgb(72, 166, 209);
+}
+
+
+/* Responsive pour mobile */
+
+@media (max-width: 768px) {
+    .inner-box {
+        grid-template-columns: 1fr;
+        /* 1 colonne sur petit écran */
+    }
+    .card {
+        height: 180px;
+    }
 }
 
 

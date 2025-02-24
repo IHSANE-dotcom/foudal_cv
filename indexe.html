@@ -22,14 +22,14 @@
         <main>
             <aside id="aside">
                 <div class="profile-details">
-                    <img src="images/photo.jpg" height="180" alt="">
+                    <img src="images/photo.jpg" height="185" alt="">
                     <h3>IHSANE FOUDAL</h3>
                 </div>
                 <nav>
-                    <a href="#about">ABOUT</a>
+                    <a href="#about">A PROPOS</a>
                     <a href="#education">EDUCATION</a>
-                    <a href="#skills">SKILLS</a>
-                    <a href="#projects">PROJECTS</a>
+                    <a href="#skills">COMPETENCES</a>
+                    <a href="#projects">PROJETS</a>
                     <a href="#experience">EXPERIENCES</a>
                     <a href="#contact">CONTACT</a>
                     <button onclick="window.location.href='signup.html'" style=" font-family: Verdana;font-size: 11pt;margin-top: 10px; padding: 10px 20px;  background: linear-gradient(135deg, #007bff, #00bfff, aqua); border: none; cursor: pointer;">
@@ -95,7 +95,7 @@ l'informatique et la programmation, je m'intéresse généralement au traitement
 
                 </div>
                 <!-- education block -->
-                <div class="label" id="education" style="font-size: 24px; font-weight: bold; padding: 20px;">EDUCATION</div>
+                <div class="label" id="education" style="font-size: 24px; font-weight: bold; padding: 20px; text-shadow: 0px 0px 10px cyan, 0px 0px 20px cyan, 0px 0px 40px cyan, 0px 0px 80px cyan;">EDUCATION</div>
                 <div class="education">
                     <!-- Carte 1 (petite) -->
                     <div class="education-card small">
@@ -141,7 +141,7 @@ l'informatique et la programmation, je m'intéresse généralement au traitement
                     </div>
                 </div>
                 <!-- skills block -->
-                <div class="label" id="skills" style=" font-size: 24px; font-weight: bold; padding: 20px;">SKILLS</div>
+                <div class="label" id="skills" style=" font-size: 24px; font-weight: bold; padding: 20px;  text-shadow: 0px 0px 10px cyan, 0px 0px 20px cyan, 0px 0px 40px cyan, 0px 0px 80px cyan;">SKILLS</div>
                 <div class="skills">
                     <div class="languages-box">
                         <p>Languages et base de donnees</p>
@@ -181,39 +181,65 @@ l'informatique et la programmation, je m'intéresse généralement au traitement
                     </div>
                 </div>
 
-                <!-- projects block -->
-                <div class="label" id="projects" style="font-size: 24px; font-weight: bold; padding: 20px;">PROJETS</div>
-                <div class="projects">
+                <!-- Bloc Projets -->
+                <div class="label" id="projects" style="font-size: 24px; font-weight: bold; padding: 20px;  text-shadow: 0px 0px 10px cyan, 0px 0px 20px cyan, 0px 0px 40px cyan, 0px 0px 80px cyan;">PROJETS</div>
 
+                <div class="projects">
                     <div class="inner-box">
 
-                        <!-- Carte 1 -->
+                        <!-- Carte 1 : Traitement d'image -->
                         <div class="card">
-                            <img src="images/image.jpg" alt="Traitement D'image">
+                            <img src="images/buss.jpg" alt="Traitement D'image">
+                            <div class="card-overlay">
+                                <div class="overlay-content">
+                                    <h2>Gestion Des Bus</h2>
+                                    <p>Système de gestion des bus en C, permet la gestion des horaires, des itinéraires et des réservations.</p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Carte 2 : Gestion Compagnie Aérienne -->
+                        <div class="card">
+                            <img src="images/image.jpg" alt="Gestion Compagnie Aérienne">
                             <div class="card-overlay">
                                 <div class="overlay-content">
                                     <h2>Traitement D'image</h2>
-                                    <p>Ce projet explore les techniques de traitement d'image, y compris la détection des bords, la segmentation et la reconnaissance d'objets.En utilisons un code python.</p>
+                                    <p>Exploration des techniques de traitement d'image, incluant la détection des bords, la segmentation et la reconnaissance d'objets avec Python.</p>
+
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Carte 2 -->
+                        <!-- Carte 3 : Projet Supplémentaire -->
                         <div class="card">
-                            <img src="images/compagnie.jpg" alt="Gestion D'une Compagnie Aérienne">
+                            <img src="images/OIP.jpg" alt="Projet Supplémentaire">
                             <div class="card-overlay">
                                 <div class="overlay-content">
                                     <h2>Gestion D'une Compagnie Aérienne</h2>
-                                    <p>Ce projet simule un système de gestion pour une compagnie aérienne, incluant la réservation de billets, la gestion des vols, des passagers et des employées, ainsi que la génération de rapports.en utilisons python flask,
-                                        my sql, html et css.</p>
+                                    <p>Système de gestion aérienne avec réservation de billets, gestion des vols, passagers, employés et rapports développé avec Python Flask, MySQL, HTML et CSS.</p>
+
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Carte 4 : Nouveau Projet -->
+                        <div class="card">
+                            <img src="images/time.jpg" alt="Nouveau Projet">
+                            <div class="card-overlay">
+                                <div class="overlay-content">
+                                    <h2>Promodoro Timer</h2>
+                                    <p>Pomodoro Timer développé pour la gestion efficace du temps et l'amélioration de la productivité.</p>
+                                    <a href="https://github.com/IHSANE-dotcom/promodoro_timer.git" target="_blank">Voir le projet</a>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
                 <!-- experience block -->
-                <div class="label" id="experience" style="font-size: 24px; font-weight: bold; padding: 20px;">EXPERIENCES</div>
+                <div class="label" id="experience" style="font-size: 24px; font-weight: bold; padding: 20px; text-shadow: 0px 0px 10px cyan, 0px 0px 20px cyan, 0px 0px 40px cyan, 0px 0px 80px cyan;">EXPERIENCES</div>
                 <div class="experience">
                     <!-- Expérience 1 -->
                     <div class="experience-box">
@@ -241,7 +267,7 @@ l'informatique et la programmation, je m'intéresse généralement au traitement
                 </div>
 
                 <!-- contact block -->
-                <div class="label" id="contact" style=" font-size: 24px; font-weight: bold; padding: 20px;">CONTACT</div>
+                <div class="label" id="contact" style=" font-size: 24px; font-weight: bold; padding: 20px;  text-shadow: 0px 0px 10px cyan, 0px 0px 20px cyan, 0px 0px 40px cyan, 0px 0px 80px cyan;">CONTACT</div>
                 <div class="contact">
                     <div class="contact-box">
                         <a href="ihssanfoudal@gmail.com"> <img src="images/email.png" height="50" alt=""> ihssanfoudal@gmail.com</a>
