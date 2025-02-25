@@ -230,7 +230,7 @@ l'informatique et la programmation, je m'intéresse généralement au traitement
                                 <div class="overlay-content">
                                     <h2>Promodoro Timer</h2>
                                     <p>Pomodoro Timer développé pour la gestion efficace du temps et l'amélioration de la productivité.</p>
-                                    <a href="https://github.com/IHSANE-dotcom/promodoro_timer.git" target="_blank">Voir le projet</a>
+                                    <a href="timer/time.html" target=" _blank ">Voir le projet</a>
                                 </div>
                             </div>
                         </div>
@@ -239,21 +239,21 @@ l'informatique et la programmation, je m'intéresse généralement au traitement
                 </div>
 
                 <!-- experience block -->
-                <div class="label" id="experience" style="font-size: 24px; font-weight: bold; padding: 20px; text-shadow: 0px 0px 10px cyan, 0px 0px 20px cyan, 0px 0px 40px cyan, 0px 0px 80px cyan;">EXPERIENCES</div>
-                <div class="experience">
+                <div class="label " id="experience " style="font-size: 24px; font-weight: bold; padding: 20px; text-shadow: 0px 0px 10px cyan, 0px 0px 20px cyan, 0px 0px 40px cyan, 0px 0px 80px cyan; ">EXPERIENCES</div>
+                <div class="experience ">
                     <!-- Expérience 1 -->
-                    <div class="experience-box">
+                    <div class="experience-box ">
                         <h1>CERTIFICATS</h1>
 
                         <ul>
-                            <li><pre>Certificat d'organisation dun événement "Data Verse et Open Source" à l'ENSAKh.</pre></li>
+                            <li><pre>Certificat d' organisation dun événement "Data Verse et Open Source " à l 'ENSAKh.</pre></li>
                             <li><pre>Formation en Git et GitHub (en cours).</pre></li>
 
                         </ul>
                     </div>
 
                     <!-- Expérience 2 -->
-                    <div class="experience-box">
+                    <div class="experience-box ">
                         <h1>TRAVAUX EN GROUPE</h1>
 
                         <ul>
@@ -267,13 +267,13 @@ l'informatique et la programmation, je m'intéresse généralement au traitement
                 </div>
 
                 <!-- contact block -->
-                <div class="label" id="contact" style=" font-size: 24px; font-weight: bold; padding: 20px;  text-shadow: 0px 0px 10px cyan, 0px 0px 20px cyan, 0px 0px 40px cyan, 0px 0px 80px cyan;">CONTACT</div>
-                <div class="contact">
-                    <div class="contact-box">
-                        <a href="ihssanfoudal@gmail.com"> <img src="images/email.png" height="50" alt=""> ihssanfoudal@gmail.com</a>
-                        <a href="tel:+212657866114"> <img src="images/telephone.png" height="50" alt=""> +212657866114</a>
-                        <a href="https://github.com/IHSANE-dotcom"> <img src="images/github.png" height="50" alt="">GitHub</a>
-                        <a href="https://www.linkedin.com/in/ihssan-foudal-669316331"> <img src="images/linkedin.png" height="50" alt="">Linkedin</a>
+                <div class="label " id="contact " style=" font-size: 24px; font-weight: bold; padding: 20px; text-shadow: 0px 0px 10px cyan, 0px 0px 20px cyan, 0px 0px 40px cyan, 0px 0px 80px cyan; ">CONTACT</div>
+                <div class="contact ">
+                    <div class="contact-box ">
+                        <a href="ihssanfoudal@gmail.com "> <img src="images/email.png " height="50 " alt=" "> ihssanfoudal@gmail.com</a>
+                        <a href="tel:+212657866114 "> <img src="images/telephone.png " height="50 " alt=" "> +212657866114</a>
+                        <a href="https://github.com/IHSANE-dotcom "> <img src="images/github.png " height="50 " alt=" ">GitHub</a>
+                        <a href="https://www.linkedin.com/in/ihssan-foudal-669316331 "> <img src="images/linkedin.png " height="50 " alt=" ">Linkedin</a>
 
                     </div>
                 </div>
@@ -283,44 +283,30 @@ l'informatique et la programmation, je m'intéresse généralement au traitement
 
     <script>
         // Script pour la navigation entre les sections
-        document.querySelectorAll('aside nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault(); // Empêche le comportement par défaut du lien
-                const targetId = this.getAttribute('href').substring(1); // Récupère l'ID de la cible
-                const targetSection = document.getElementById(targetId); // Trouve la section cible
-                if (targetSection) {
-                    targetSection.scrollIntoView({
-                        behavior: 'smooth'
-                    }); // Fait défiler jusqu'à la section
-                }
-            });
+        document.querySelectorAll('aside nav a ').forEach(anchor => {
+        anchor.addEventListener('click ', function(e) {
+            e.preventDefault(); // Empêche le comportement par défaut du lien
+            const targetId = this.getAttribute('href ').substring(1); // Récupère l'ID de la cible const targetSection=d ocument.getElementById(targetId); // Trouve la section cible if (targetSection) { targetSection.scrollIntoView({ behavior:
+            'smooth'
+        }); // Fait défiler jusqu 'à la section
+        }
+        });
         });
 
-        // Script pour l'animation du texte
-        const arr = ["Ingénieure de données", "Informaticienne", "Développeur"];
-        let i = 0;
-        let index = 0;
-        var text = arr[index];
-        printName();
-
-        function printName() {
-            document.getElementById("type").textContent = text.substring(0, i);
-            i++;
-            if (i < text.length + 1)
-                setTimeout(printName, 200);
-            else
-                eraseName();
+        // Script pour l'animation du texte const arr=[ "Ingénieure de données ", "Informaticienne ", "Développeur "]; let i=0 ; let index=0 ; var text=a rr[index]; printName(); function printName() { document.getElementById( "type ").textContent=t
+        ext.substring(0, i);
+        i++;
+        if (i < text.length + 1) setTimeout(printName, 200);
+        else eraseName();
         }
 
         function eraseName() {
-            document.getElementById("type").textContent = text.substring(0, i);
+            document.getElementById("type ").textContent = t ext.substring(0, i);
             i--;
-            if (i > 0)
-                setTimeout(eraseName, 150);
+            if (i > 0) setTimeout(eraseName, 150);
             else {
                 index++;
-                if (index >= arr.length)
-                    index = 0;
+                if (index >= arr.length) index = 0;
                 text = arr[index];
                 printName();
             }
